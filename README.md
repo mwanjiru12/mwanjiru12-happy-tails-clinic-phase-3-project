@@ -1,5 +1,4 @@
 # Happy Tails Clinic - Phase 3 CLI Project
-=====================================
 
 ## Introduction
 This is a CLI application that manages a pet care center's collection of pets, for use by veterinarians with the center's owners.
