@@ -1,3 +1,4 @@
 jeje
 A database created and modified with your own ORM with at least 2+ related tables.
 A well-maintained virtual environment using Pipenv.
+Proper package structure in your application.
