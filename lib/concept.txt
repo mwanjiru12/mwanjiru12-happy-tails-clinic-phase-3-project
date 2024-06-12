@@ -1,0 +1,31 @@
+Pets Table
+| Column | Description |
+| --- | --- |
+| ID | A unique identifier for each pet. |
+| Name | The name of the pet. |
+| Breed | The breed of the pet. |
+| Illness | The illness or health condition of the pet. |
+| Availability | Whether the pet is currently available or in use. |
+
+Veterinarians Table
+| Column | Description |
+| --- | --- |
+| ID | A unique identifier for each veterinarian. |
+| Name | The name of the veterinarian. |
+| Specialization | The veterinarian's area of specialization or expertise. |
+
+ Owners Table
+| Column | Description |
+| --- | --- |
+| ID | A unique identifier for each owner. |
+| Name | The name of the owner. |
+
+Appointments Table
+| Column | Description |
+| --- | --- |
+| ID | A unique identifier for each appointment record. |
+| Pet ID | The ID of the pet being used. |
+| Veterinarian ID | The ID of the veterinarian using the pet. |
+| Owner ID | The ID of the owner with whom the pet is being used. |
+| Start Date | The date and time when the appointment started. |
+| End Date | The date and time when the appointment ended. |
