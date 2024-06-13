@@ -62,10 +62,11 @@ The `models.py` file defines the model structure for the SQLite database using t
 ## File Descriptions
 
 ### cli.py
-This Python script defines a command-line interface (CLI) for the application. It uses the click library, a Python package that simplifies the creation of command line interfaces.
+This Python script defines a command-line interface (CLI) for the application. It uses the click library, a Python package that simplifies the creation of command line interfaces. <br/>
 
 ### pets.py
-This file defines a series of command-line interface (CLI) commands for managing pets.
+This file defines a series of command-line interface (CLI) commands for managing pets. <br>
+![Pets Menu](screenshots/petsmenu.png)
 
 ### owners.py
 This file defines a series of command-line interface (CLI) commands for managing owners.
