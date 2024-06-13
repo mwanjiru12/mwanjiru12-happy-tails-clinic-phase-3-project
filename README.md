@@ -109,6 +109,18 @@ This class represents a table in the database named 'appointments'.
 
 ### cli.py
 This Python script defines a command-line interface (CLI) for the application. It uses the click library, a Python package that simplifies the creation of command line interfaces. <br>
+The script starts by importing the `click` module.
+
+It then imports commands from several modules: `pets`, `owners`, `veterinarians`, and `appointments`. Each of these modules contains a set of commands related to their respective domains (managing pets, owners, veterinarians, and appointments).
+
+The `@click.group()` decorator is used to create a new `click.Group` instance that serves as the main command of the CLI. The function `cli()` is a placeholder for this group. The docstring inside this function, `"""Welcome to Spirit Stones, the Pet Management Application!"""`, is displayed as a welcome message when the CLI is launched.
+
+The script then iterates over the commands imported from the different modules and adds them to the main `cli` command group. This is done using the `add_command` method of the `cli` group. After this step, `cli` is a group of commands that can be invoked from the command line.
+
+Finally, the script includes the usual Python idiom for launching the main function of the script: `if __name__ == '__main__':`. When the script is run directly (i.e., not imported as a module), it invokes `cli()`, which launches the CLI.
+
+The specific commands supported by this CLI and their functionalities are defined in the `pets`, `owners`, `veterinarians`, and `appointments` modules, which are described below.
+
 ![Pets Menu](screenshots/mainmenu.png)
 
 ### pets.py
