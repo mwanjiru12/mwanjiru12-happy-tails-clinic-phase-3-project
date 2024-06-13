@@ -81,7 +81,7 @@ These functions are added to a list named `commands`, which is imported by the C
 
 ### owners.py
 This file defines a series of command-line interface (CLI) commands for managing owners.<br>
-![Pets Menu](screenshots/ownermenu.png)
+![Pets Menu](screenshots/ownermenu.png)<br>
 This file also defines a set of CLI commands using `click` and SQLAlchemy. The functions include:
 
 - `add_owner(name)`: Adds a new owner to the database with the given name.
@@ -94,7 +94,7 @@ These functions are added to a list named `commands`, which is imported by the C
 
 ### veterinarians.py
 This file defines a series of command-line interface (CLI) commands for managing veterinarians.<br>
-![Pets Menu](screenshots/veterinarian.png)
+![Pets Menu](screenshots/veterinarian.png)<br>
 This file defines CLI commands for managing veterinarians using `click` and SQLAlchemy. The functions include:
 
 - `add_veterinarian(name, specialization)`: Adds a new veterinarian with the given name and specialization.
@@ -106,7 +106,7 @@ These functions are added to a list named `commands`, which is imported by the C
 
 ### appointments.py
 This file defines a series of command-line interface (CLI) commands for managing appointments.<br>
- ![Pets Menu](screenshots/appointments.png)
+ ![Pets Menu](screenshots/appointments.png)<br>
  This file defines CLI commands for managing appointment records using `click` and SQLAlchemy. An appointment record represents the instance of a pet being seen by a veterinarian under an owner's care<br> The functions include:
 
 - `add_appointment(pet_id, veterinarian_id, owner_id)`: Adds a new appointment record with the given pet ID, veterinarian ID, and owner ID, setting the current date as the start date.
