@@ -67,19 +67,54 @@ This Python script defines a command-line interface (CLI) for the application. I
 
 ### pets.py
 This file defines a series of command-line interface (CLI) commands for managing pets. <br>
-![Pets Menu](screenshots/petsmenu.png)
+![Pets Menu](screenshots/petsmenu.png)<br>
+This file defines a series of CLI commands using the `click` library and SQLAlchemy for database interactions. The functions include:
+
+- `add_pet(name, color, properties)`: Adds a new pet to the database with the given name, color, and properties, setting availability to `True`.
+- `remove_pet(id)`: Removes a pet identified by the provided `id`.
+- `update_pet(id, name, color, properties)`: Updates the details (name, color, properties) of a pet identified by `id`.
+- `view_pet(id)`: Retrieves and displays the details of a pet identified by `id`.
+- `search_pet(query)`: Searches for pets by `id`, name, color, or properties.
+- `list_pets()`: Lists all pets in the database. <br>
+These functions are added to a list named `commands`, which is imported by the CLI script to include these commands in the main CLI command group.
+
 
 ### owners.py
 This file defines a series of command-line interface (CLI) commands for managing owners.<br>
 ![Pets Menu](screenshots/ownermenu.png)
+This file also defines a set of CLI commands using `click` and SQLAlchemy. The functions include:
+
+- `add_owner(name)`: Adds a new owner to the database with the given name.
+- `update_owner(id, name)`: Updates the name of an existing owner identified by `id`.
+- `remove_owner(id)`: Removes an owner identified by `id`.
+- `list_owners()`: Lists all owners in the database.
+
+These functions are added to a list named `commands`, which is imported by the CLI script to include these commands in the main CLI command group.
+
 
 ### veterinarians.py
 This file defines a series of command-line interface (CLI) commands for managing veterinarians.<br>
 ![Pets Menu](screenshots/veterinarian.png)
+This file defines CLI commands for managing veterinarians using `click` and SQLAlchemy. The functions include:
+
+- `add_veterinarian(name, specialization)`: Adds a new veterinarian with the given name and specialization.
+- `update_veterinarian(id, name, specialization)`: Updates the name and specialization of a veterinarian identified by `id`.
+- `remove_veterinarian(id)`: Removes a veterinarian identified by `id`.
+- `list_veterinarians()`: Lists all veterinarians in the database.
+
+These functions are added to a list named `commands`, which is imported by the CLI script to include these commands in the main CLI command group.
 
 ### appointments.py
 This file defines a series of command-line interface (CLI) commands for managing appointments.<br>
  ![Pets Menu](screenshots/appointments.png)
+ This file defines CLI commands for managing appointment records using `click` and SQLAlchemy. An appointment record represents the instance of a pet being seen by a veterinarian under an owner's care<br> The functions include:
+
+- `add_appointment(pet_id, veterinarian_id, owner_id)`: Adds a new appointment record with the given pet ID, veterinarian ID, and owner ID, setting the current date as the start date.
+- `update_appointment(id, pet_id, veterinarian_id, owner_id, end_date)`: Updates an existing appointment record identified by `id`.
+- `remove_appointment(id)`: Removes an appointment record identified by `id`.
+- `list_appointments()`: Lists all appointment records in the database.
+
+These functions are added to a list named `commands`, which is imported by the CLI script to include these commands in the main CLI command group.
 
 ## Author
 Created by Maria Wanjiru
