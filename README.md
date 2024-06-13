@@ -32,7 +32,6 @@ The `models.py` file defines the model structure for the SQLite database using t
 | --- | --- |
 | ID | A unique identifier for each pet. |
 | Name | The name of the pet. |
-| Breed | The breed of the pet. |
 | Illness | The illness or health condition of the pet. |
 | Availability | Whether the pet is currently available for appointment. |
 
