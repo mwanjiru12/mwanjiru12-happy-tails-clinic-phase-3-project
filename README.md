@@ -42,35 +42,35 @@ This class represents a table in the database named 'appointments'.
 ### Tables for Database
 
 #### Pets Table
-\| Column | Description |
-\| --- | --- |
-\| ID | A unique identifier for each pet. |
-\| Name | The name of the pet. |
-\| Illness | The illness or health condition of the pet. |
-\| Availability | Whether the pet is currently available for appointment. |
+| Column | Description |
+| --- | --- |
+| ID | A unique identifier for each pet. |
+| Name | The name of the pet. |
+| Illness | The illness or health condition of the pet. |
+| Availability | Whether the pet is currently available for appointment. |
 
 #### Veterinarians Table
-\| Column | Description |
-\| --- | --- |
-\| ID | A unique identifier for each veterinarian. |
-\| Name | The name of the veterinarian. |
-\| Specialization | The veterinarian's area of specialization or expertise. |
+| Column | Description |
+| --- | --- |
+| ID | A unique identifier for each veterinarian. |
+| Name | The name of the veterinarian. |
+| Specialization | The veterinarian's area of specialization or expertise. |
 
 #### Owners Table
-\| Column | Description |
-\| --- | --- |
-\| ID | A unique identifier for each owner. |
-\| Name | The name of the owner. |
+| Column | Description |
+| --- | --- |
+| ID | A unique identifier for each owner. |
+| Name | The name of the owner. |
 
 #### Appointments Table
-\| Column | Description |
-\| --- | --- |
-\| ID | A unique identifier for each appointment record. |
-\| Pet ID | The ID of the pet being used. |
-\| Veterinarian ID | The ID of the veterinarian using the pet. |
-\| Owner ID | The ID of the owner with whom the pet is being used. |
-\| Start Date | The date and time when the appointment started. |
-\| End Date | The date and time when the appointment ended. |
+| Column | Description |
+| --- | --- |
+| ID | A unique identifier for each appointment record. |
+| Pet ID | The ID of the pet being used. |
+| Veterinarian ID | The ID of the veterinarian using the pet. |
+| Owner ID | The ID of the owner with whom the pet is being used. |
+| Start Date | The date and time when the appointment started. |
+| End Date | The date and time when the appointment ended. |
 
 ## File Descriptions
 
@@ -85,8 +85,14 @@ This Python script defines a command-line interface (CLI) for the application. I
 - The script includes the idiom \`if __name__ == '__main__':\` to launch \`cli()\` when run directly.
 
 ### \`pets.py\`
-This file defines CLI commands for managing pets using \`click\` and SQLAlchemy.
-
+This file defines CLI commands for managing pets using \`click\` and SQLAlchemy.<br>
+- `add_pet(name, color, properties)`: Adds a new pet to the database with the given name, color, and properties, setting availability to `True`.
+- `remove_pet(id)`: Removes a pet identified by the provided `id`.
+- `update_pet(id, name, color, properties)`: Updates the details (name, color, properties) of a pet identified by `id`.
+- `view_pet(id)`: Retrieves and displays the details of a pet identified by `id`.
+- `search_pet(query)`: Searches for pets by `id`, name, color, or properties.
+- `list_pets()`: Lists all pets in the database. <br>
+These functions are added to a list named `commands`, which is imported by the CLI script to include these commands in the main CLI command group.
 ![Pets Menu](screenshots/petsmenu.png)
 
 ### \`owners.py\`
