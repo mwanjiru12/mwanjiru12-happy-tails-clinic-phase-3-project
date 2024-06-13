@@ -39,6 +39,15 @@ This class represents a table in the database named 'owners'.
 #### \`class Appointment(Base)\`
 This class represents a table in the database named 'appointments'.
 
+**Relationships:**
+- Relationships with the 'Pet', 'Veterinarian', and 'Owner' classes.
+
+**Foreign Keys:**
+- `pet_id`: Links to the 'pets' table.
+- `veterinarian_id`: Links to the 'veterinarians' table.
+- `owner_id`: Links to the 'owners' table.
+
+
 ### Tables for Database
 
 #### Pets Table
