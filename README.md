@@ -25,6 +25,53 @@ As a user I am able to:
 ## Model Structure for SQLite Database
 The `models.py` file defines the model structure for the SQLite database using the SQLAlchemy ORM (Object Relational Mapping) in Python.
 
+# Database Model Structure
+
+This file defines the model structure for the SQLite database using SQLAlchemy ORM (Object Relational Mapping) in Python. Below is a breakdown of its functionality:
+
+- `engine = create_engine('sqlite:///spiritstones.db')`: This line of code creates a new engine to interact with the SQLite database 'spiritstones.db'.
+- `Session = sessionmaker(bind=engine)`: This line sets up a factory to create new Session objects, which are the primary interface for persistence operations in SQLAlchemy.
+- `Base = declarative_base()`: This line sets up a base class for declarative class definitions. The new base class will be given a metaclass that produces appropriate Table objects and makes the appropriate mapper() calls based on the information provided declaratively in the class and any subclasses of the class.
+
+## Class Definitions
+
+### `class Pet(Base)`
+
+This class represents a table in the database named 'pets'.
+
+**Relationships:**
+- Relationship with the 'Appointment' class.
+
+**Methods:**
+- `update_availability`: Updates the availability status of a pet based on whether there is an open appointment.
+
+### `class Veterinarian(Base)`
+
+This class represents a table in the database named 'veterinarians'.
+
+**Relationships:**
+- Relationship with the 'Appointment' class.
+
+### `class Owner(Base)`
+
+This class represents a table in the database named 'owners'.
+
+**Relationships:**
+- Relationship with the 'Appointment' class.
+
+### `class Appointment(Base)`
+
+This class represents a table in the database named 'appointments'.
+
+**Relationships:**
+- Relationships with the 'Pet', 'Veterinarian', and 'Owner' classes.
+
+**Foreign Keys:**
+- `pet_id`: Links to the 'pets' table.
+- `veterinarian_id`: Links to the 'veterinarians' table.
+- `owner_id`: Links to the 'owners' table.
+
+
 ### Tables for Database
 
 #### Pets Table
